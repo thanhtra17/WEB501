@@ -8,8 +8,8 @@ const News = {
         <div class="grid grid-cols-3 gap-8">
             ${data.map((post) => `
             <div class="border p-3">
-                <a href=""><img src="${post.img}" alt="" /></a>
-                <h3 class="my-3"><a href="" class="font-semibold text-orange-500 text-lg">${post.title}</a></h3>
+                <a href="/new/${post.id}"><img src="${post.img}" alt="" /></a>
+                <h3 class="my-3"><a href="/new/${post.id}" class="font-semibold text-orange-500 text-lg">${post.title}</a></h3>
                 <p>${post.desc}</p>
             </div>
             `).join("")}
@@ -20,8 +20,8 @@ const News = {
         <div class="grid grid-cols-3 gap-8">
             ${data.map((post) => `
             <div class="border p-3">
-                <a href=""><img src="${post.img}" alt="" /></a>
-                <h3 class="my-3"><a href="" class="font-semibold text-orange-500 text-lg">${post.title}</a></h3>
+                <a href="/new/${post.id}"><img src="${post.img}" alt="" /></a>
+                <h3 class="my-3"><a href="/new/${post.id}" class="font-semibold text-orange-500 text-lg">${post.title}</a></h3>
                 <p>${post.desc}</p>
             </div>
             `).join("")}
@@ -40,8 +40,8 @@ export const News2 = {
         <div class="grid grid-cols-3 gap-8">
             ${data2.map((post) => `
             <div class="border p-3">
-                <a href=""><img src="${post.img}" alt="" /></a>
-                <h3 class="my-3"><a href="" class="font-semibold text-orange-500 text-lg">${post.title}</a></h3>
+                <a href="/new/${post.id}"><img src="${post.img}" alt="" /></a>
+                <h3 class="my-3"><a href="/new/${post.id}" class="font-semibold text-orange-500 text-lg">${post.title}</a></h3>
                 <p>${post.desc}</p>
             </div>
             `).join("")}
@@ -52,8 +52,8 @@ export const News2 = {
         <div class="grid grid-cols-3 gap-8">
             ${data2.map((post) => `
             <div class="border p-3">
-                <a href=""><img src="${post.img}" alt="" /></a>
-                <h3 class="my-3"><a href="" class="font-semibold text-orange-500 text-lg">${post.title}</a></h3>
+                <a href="/new/${post.id}"><img src="${post.img}" alt="" /></a>
+                <h3 class="my-3"><a href="/new/${post.id}" class="font-semibold text-orange-500 text-lg">${post.title}</a></h3>
                 <p>${post.desc}</p>
             </div>
             `).join("")}
@@ -71,8 +71,8 @@ export const News3 = {
         <div class="grid grid-cols-3 gap-8">
             ${data3.map((post) => `
             <div class="border p-3">
-                <a href=""><img src="${post.img}" alt="" /></a>
-                <h3 class="my-3"><a href="" class="font-semibold text-orange-500 text-lg">${post.title}</a></h3>
+                <a href="/new/${post.id}"><img src="${post.img}" alt="" /></a>
+                <h3 class="my-3"><a href="/new/${post.id}" class="font-semibold text-orange-500 text-lg">${post.title}</a></h3>
                 <p>${post.desc}</p>
             </div>
             `).join("")}
@@ -83,8 +83,8 @@ export const News3 = {
         <div class="grid grid-cols-3 gap-8">
             ${data3.map((post) => `
             <div class="border p-3">
-                <a href=""><img src="${post.img}" alt="" /></a>
-                <h3 class="my-3"><a href="" class="font-semibold text-orange-500 text-lg">${post.title}</a></h3>
+                <a href="/new/${post.id}"><img src="${post.img}" alt="" /></a>
+                <h3 class="my-3"><a href="/new/${post.id}" class="font-semibold text-orange-500 text-lg">${post.title}</a></h3>
                 <p>${post.desc}</p>
             </div>
             `).join("")}
