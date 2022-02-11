@@ -1,29 +1,25 @@
+import { signup } from "../api/users";
 const SignUp = {
-    render() {
-        return /*html*/`
-        <form>
-  <div class="flex items-center justify-center h-screen bg-gray-100">
-    <div class="bg-white py-6 rounded-md px-10 max-w-lg shadow-md">
-      <h1 class="text-center text-lg font-bold text-gray-500">Form Register</h1>
-      <div class="space-y-4 mt-6">
-        <div class="w-full">
-          <input type="text" placeholder="fullname" class="px-4 py-2 bg-gray-50" />
-        </div>
-        <div class="w-full">
-          <input type="text" placeholder="username" class="px-4 py-2 bg-gray-50" />
-        </div>
-        <div class="w-full">
-          <input type="text" placeholder="email" class="px-4 py-2 bg-gray-50" />
-        </div>
-        <div class="w-full">
-          <input type="text" placeholder="password" class="px-4 py-2 bg-gray-50" />
-        </div>
-      </div>
-      <button class="w-full mt-5 bg-indigo-600 text-white py-2 rounded-md font-semibold tracking-tight">Register</button>
-    </div>
-  </div>
-</form>
-        `;
-    },
-};
+  render(){
+    return /*html*/`
+        <form id="formSignup">
+            <input type="text" placeholder="username" id="username" /> <br />
+            <input type="email" placeholder="email" id="email" /> <br />
+            <input type="password" placeholder="password" id="password" /> <br />
+            <button class="border border-black">Đăng ký</button>
+        </form>
+    `
+},
+afterRender(){
+    const formSignup = document.querySelector('#formSignup');
+    formSignup.addEventListener('submit', function(e){
+        e.preventDefault();
+        signup({
+            username: document.querySelector('#username').value,
+            email: document.querySelector('#email').value,
+            password: document.querySelector('#password').value
+        })
+    });
+}
+}
 export default SignUp;

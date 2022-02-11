@@ -2,7 +2,7 @@ import banner1 from "../components/banner";
 import News from "../components/new";
 
 const HomePage = {
-    render() {
+   async render() {
         return /*html*/ `
        <div class="banner" >
         ${banner1.render()};
@@ -10,7 +10,7 @@ const HomePage = {
 
 
         <div class="new" >
-        ${News.render()};
+        ${await News.render()};
         </div>
        
               <!-- <section class="my-3">
