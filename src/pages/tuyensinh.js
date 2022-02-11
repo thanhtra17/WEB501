@@ -1,5 +1,4 @@
 import { banner2 } from "../components/banner";
-import { News2 } from "../components/new";
 const Tuyensinh = {
     render() {
         return `
@@ -9,7 +8,7 @@ const Tuyensinh = {
 
 
         <div class="new" >
-        ${News2.render()};
+        
         </div>
         
         `;

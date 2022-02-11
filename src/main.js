@@ -19,25 +19,29 @@ import AdminNewEdit from "./pages/admin/newedit";
 import news from "./pages/admin/new";
 
 
+import AdminNewsAdd from "./pages/admin/new/add";
+
+
 const router = new Navigo("/", { linksSelector: "a" });
 
-const print = (content) => {
+const print = async (content) => {
     document.querySelector("#header").innerHTML = Header.render();
-    document.querySelector("#app").innerHTML = content;
+    document.querySelector("#app").innerHTML = await content.render();
+    if(content.afterRender) await content.afterRender();
     document.querySelector("#footer").innerHTML = Footer.render();
 };
 
 router.on({
     "/": () => {
-        print(HomePage.render());
+        print(HomePage);
     },
     // 
     "/tuyensinh": () => {
-        print(Tuyensinh.render());
+        print(Tuyensinh);
     },
     // 
     "/daotao": () => {
-        print(Daotao.render());
+        print(Daotao);
     },
     // 
     "/new/:id":({data}) => {
@@ -51,33 +55,56 @@ router.on({
     },
     // 
     "/admin/product": () => {
-        print(ProductmanagePage.render());
+        print(ProductmanagePage);
     },
     // 
     "/signup": () => {
-        print(SignUp.render());
+        print(SignUp);
     },
     // 
     "/signin": () => {
-        print(SignIn.render());
+        print(SignIn);
     },
     // 
     "/newadd": () =>{
-        print(NewAdd.render());
+        print(NewAdd);
     },
     // 
     "/dashboard": () =>{
-        print(dashboard.render());
+        print(dashboard);
     },
     // 
     "/admin/new/edit": () =>{
-        print(AdminNewEdit.render());
+        print(AdminNewEdit);
     },
     //
     "/news": () =>{
-        print(news.render());
+        print(news);
     },
+    "/admin/new/add": () =>{
+        print(AdminNewsAdd);
+    }
     
 });
 
 router.resolve();
+
+
+// const api = "https://5e79b4b817314d00161333da.mockapi.io/posts";
+// fetch (api)
+// .then(response => response.json())
+// .then(data => console.log(data))
+
+
+// const getProduct = () => NewPromise((resolve, reject) => {
+//     setTimeout(() =>{
+//             try {
+//                 resolve([1,2,3,4])
+//             } catch (error) {
+//                 reject("kết nối không thành công")
+//             }
+//     },3000)
+// });
+
+
+// const showproduct
