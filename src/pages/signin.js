@@ -2,9 +2,9 @@ import { signin } from "../api/users";
 const SignIn = {
     render(){
         return /*html*/`
-        <div class="w-full min-h-screen bg-gray-50 flex flex-col sm:justify-center items-center pt-6 sm:pt-0">
+<div class="w-full min-h-screen bg-gray-50 flex flex-col sm:justify-center items-center pt-6 sm:pt-0">
   <div class="w-full sm:max-w-md p-5 mx-auto">
-    <h2 class="mb-12 text-center text-5xl font-extrabold">Welcome.</h2>
+    <h2 class="mb-12 text-center text-5xl font-extrabold">Sign In</h2>
     <form id="formSignin">
       <div class="mb-4">
         <label class="block mb-1" for="email">Email-Address</label>
@@ -47,7 +47,7 @@ const SignIn = {
            localStorage.setItem("user", JSON.stringify(data.user));
            // kiểm tra quyền dựa trên ID
            if (data.user.id === 1) {
-               document.location.href = "/#/admin/dashboard";
+               document.location.href = "/admin/news/dashboard";
            } else {
                document.location.href = "/#/";
            }

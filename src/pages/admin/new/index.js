@@ -1,12 +1,13 @@
 import { getAll, remove } from "../../../api/post";
 import NavAdmin from "../../../components/NavAdmin";
+import { reRender } from "../../../ultils";
 
 const AdminNews = {
     async render(){
         const { data } = await getAll();
         return /*html*/`
         <div class="min-h-full">
-            ${NavAdmin.render()}
+           
             <header class="bg-white shadow">
             <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                 <!-- This example requires Tailwind CSS v2.0+ -->
@@ -19,12 +20,12 @@ const AdminNews = {
                     </h2>
                 </div>
                 <div class="mt-5 flex lg:mt-0 lg:ml-4">
-                    <a href="/admin/news/add" class="sm:ml-3">
+                    <a href="/admin/new/add" class="sm:ml-3">
                         <button
                             type="button"
                             class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                         >
-                            Thêm mới
+                        <a href="/admin/new/add">Thêm mới</a>
                         </button>
                     </a>
                 </div>
@@ -35,28 +36,35 @@ const AdminNews = {
             <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
                 <!-- Replace with your content -->
                 <div class="px-4 py-6 sm:px-0">
-                    <table>
-                        <thead>
+                    <table class="min-w-full border-collapse block md:table">
+                        <!-- <thead>
                             <tr>
                                 <th>STT</th>
                                 <th>Tiêu đề</th>
                                 <th>Ảnh</th>
                                 <th></th>
                             </tr>
-                        </thead>
-                        <tbody>
+                        </thead> -->
+                        <thead class="block md:table-header-group">
+                            <tr class="border border-grey-500 md:border-none block md:table-row absolute -top-full md:top-auto -left-full md:left-auto  md:relative ">
+                                <th class="bg-gray-600 p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">STT</th>
+                                <th class="bg-gray-600 p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">Tiêu đề</th>
+                                <th class="bg-gray-600 p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">Ảnh</th>
+                                <th class="bg-gray-600 p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">Actions</th>
+                            </tr>
+		                </thead>
+                        <tbody  >
                             ${data.map((post, index) => `
                                 <tr>
                                     <td>${index+1}</td>
                                     <td>${post.title}</td>
-                                    <td><img src="${post.img}" width="50"/></td>
+                                    <td><img src="${post.img}" width="80"/></td>
                                     <td>
-                                        <a href="/admin/news/${post.id}/edit">Edit</a>
-                                        <button data-id="${post.id}" class="btn btn-remove">Xóa</button>
+                                        <a href="/admin/new/${post.id}/edit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 border border-blue-500 rounded">Edit</a>
+                                        <button data-id="${post.id}" class="btn btn-remove bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 border border-red-500 rounded"  >Xóa</button>
                                     </td>
                                 </tr>
                             `).join("")}
-                            
                         </tbody>
                     </table>
                 </div>
@@ -81,6 +89,7 @@ const AdminNews = {
                         console.log('Da xoa thanh cong')
                     })
                 }
+                reRender(AdminNews, "#app")
             })
         });
     }
