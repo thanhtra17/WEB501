@@ -2,7 +2,7 @@
   "posts": [
     {
       "createdAt": "2022-01-15T02:34:50.705Z",
-      "title": "Mới update title này",
+      "title": "Mới update title",
       "img": "http://placeimg.com/640/480/business",
       "desc": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
       "id": "7"
@@ -97,25 +97,13 @@
       "img": "http://placeimg.com/640/480/fashion",
       "desc": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J",
       "id": "23"
-    },
-    {
-      "title": "",
-      "img": "",
-      "desc": "",
-      "id": "hHNCe2w"
-    },
-    {
-      "title": "abcxyz",
-      "img": "http://res.cloudinary.com/thanhtra/image/upload/v1644500534/Web2061_sp2022/zwyamhppnqu19b9cm1sn.jpg",
-      "desc": "abcdefghiklmn",
-      "id": "P-Vbsdq"
     }
   ],
   "users": [
     {
-      "email": "traptph15606@fpt.edu.vn",
-      "password": "$2a$10$37ebmjvJGW//I.N1UQVUsusgEwAu5ai5h4e/.3uhj.h8jlOye2C7y",
-      "username": "thanhtra",
+      "email": "thanhtra123456@gmail.com",
+      "password": "$2a$10$AA1IpSCn/NHY.dzIHwK8meMwDNFOCCdYy212VrR/M39xJ76vlw3rq",
+      "username": "thanhtra123456",
       "id": 1
     },
     {
@@ -125,9 +113,9 @@
       "id": 2
     },
     {
-      "email": "thanhtra123456@gmail.com",
-      "password": "$2a$10$AA1IpSCn/NHY.dzIHwK8meMwDNFOCCdYy212VrR/M39xJ76vlw3rq",
-      "username": "thanhtra123456",
+      "email": "duongmeo@gmail.com",
+      "password": "$2a$10$Z49d4RyQOQIv7XpdV9PvvuHzRBdEq0.ZHijKJG.wLBEvaQqYWofVC",
+      "username": "duongmeo1703",
       "id": 3
     }
   ]

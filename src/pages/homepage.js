@@ -5,7 +5,7 @@ const HomePage = {
    async render() {
         return /*html*/ `
        <div class="banner" >
-        ${banner1.render()};
+        ${banner1.render()}
         </div>
 
 
@@ -84,5 +84,6 @@ const HomePage = {
           </section> -->
           `;
     },
+    
 };
 export default HomePage;
