@@ -3,23 +3,27 @@ import Navigo from "navigo";
 import Header from "./components/header";
 import Footer from "./components/footer";
 import HomePage from "./pages/homepage";
-import Tuyensinh from "./pages/tuyensinh";
-import Daotao from "./pages/daotao";
 import Detailpage from "./pages/admin/new/detailpage";
-// 
-import ProductmanagePage from "./pages/admin/product";
 // 
 import SignUp from "./pages/signup";
 import SignIn from "./pages/signin";
 // 
                                 // import NewAdd from "./pages/admin/newadd";
 import dashboard from "./pages/admin/dashboard";
-import AdminNewEdit from "./pages/admin/newedit";
 import news from "./pages/admin/new";
+import News from "./components/new";
 import AdminNews from "./pages/admin/new";
 import AdminNewsAdd from "./pages/admin/new/add";
 import AdminEditPost from "./pages/admin/new/edit";
-
+// 
+import ProductsPage from "./components/product";
+import ProductmanagePage from "./pages/admin/product/index.js"
+import AdminProductsAdd from "./pages/admin/product/add";
+import AdminEditProduct from "./pages/admin/product/edit";
+import DetailProduct from "./pages/admin/product/detailproduct";
+// 
+import CartPage from "./pages/cart";
+ 
 
 
 const router = new Navigo("/", { linksSelector: "a" });
@@ -36,21 +40,9 @@ router.on({
         print(HomePage);
     },
     // 
-    "/tuyensinh": () => {
-        print(Tuyensinh);
-    },
-    // 
-    "/daotao": () => {
-        print(Daotao);
-    },
-    // 
     "/news/:id":({data}) => {
         const {id} = data;
         print(Detailpage,id)
-    },
-    // 
-    "/admin/product": () => {
-        print(ProductmanagePage);
     },
     // 
     "/signup": () => {
@@ -68,18 +60,42 @@ router.on({
     "/dashboard": () =>{
         print(dashboard);
     },
-    // 
-    "/admin/new/edit": () =>{
-        print(AdminNewEdit);
-    },
     //
-    "admin/news/dashboard": () =>{
+    "/news":() =>{
+        print(News)
+    },
+    // 
+    "/admin/news": () =>{
         print(AdminNews);
     },
+    // 
     "/admin/new/add": () =>{
         print(AdminNewsAdd);
     },
+    // 
     "/admin/new/:id/edit": ({ data }) => print(AdminEditPost, data.id),
+    // 
+    "/products": () =>{
+        print(ProductsPage);
+    },
+    // 
+    "/admin/products": () =>{
+        print(ProductmanagePage);
+    },
+    // 
+    "/admin/products/add": () =>{
+        print(AdminProductsAdd);
+    },
+    "/admin/product/:id/edit": ({ data }) => print(AdminEditProduct, data.id),
+    // 
+    "/product/:id":({data}) => {
+        const {id} = data;
+        print(DetailProduct,id)
+    },
+    // 
+    "/cart": () =>{
+        print(CartPage);
+    },
 });
 
 router.resolve();

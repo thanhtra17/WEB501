@@ -47,7 +47,7 @@ const SignIn = {
            localStorage.setItem("user", JSON.stringify(data.user));
            // kiểm tra quyền dựa trên ID
            if (data.user.id === 1) {
-               document.location.href = "/admin/news/dashboard";
+               document.location.href = "/admin/news";
            } else {
                document.location.href = "/#/";
            }

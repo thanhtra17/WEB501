@@ -90,13 +90,6 @@
       "img": "http://placeimg.com/640/480/cats",
       "desc": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J",
       "id": "22"
-    },
-    {
-      "createdAt": "2022-01-18T19:58:18.894Z",
-      "title": "Erin Herman",
-      "img": "http://placeimg.com/640/480/fashion",
-      "desc": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J",
-      "id": "23"
     }
   ],
   "users": [
@@ -117,6 +110,64 @@
       "password": "$2a$10$Z49d4RyQOQIv7XpdV9PvvuHzRBdEq0.ZHijKJG.wLBEvaQqYWofVC",
       "username": "duongmeo1703",
       "id": 3
+    }
+  ],
+  "products": [
+    {
+      "title": "MULTICOLOR KNIT SWEATER",
+      "img": "http://res.cloudinary.com/thanhtra/image/upload/v1645152511/Web2061_sp2022/tgeboaruguhs022t0vgv.jpg",
+      "price": "720000",
+      "desc": "Chất liệu sợi Cotton 60% Visco 25% Poly 15%\nForm oversized\nDệt tràn thân áo\nLogo da đúc kim loại thương hiệu trước ngực",
+      "id": "I9OC2_a"
+    },
+    {
+      "title": "FIGHT CLUB KNIT SWEATER",
+      "img": "http://res.cloudinary.com/thanhtra/image/upload/v1645202383/Web2061_sp2022/qipdl8sipleomlvdfnjz.jpg",
+      "price": "720000",
+      "desc": "Chất liệu sợi Cotton 60% Visco 25% Poly 15%\nForm oversized\nDệt tràn thân áo",
+      "id": "NcTsW9z"
+    },
+    {
+      "title": "PLEASURE KNIT SWEATER",
+      "img": "http://res.cloudinary.com/thanhtra/image/upload/v1645202661/Web2061_sp2022/bnur3y3tihu0n9cp96we.jpg",
+      "price": "720000",
+      "desc": "Chất liệu sợi Cotton 60% Visco 25% Poly 15%\nForm oversized\nDệt tràn thân áo",
+      "id": "mZA2an2"
+    },
+    {
+      "title": "AMERICAN PSYCHO KNIT SWEATER",
+      "img": "http://res.cloudinary.com/thanhtra/image/upload/v1645202712/Web2061_sp2022/vsa77msfjsw9iflyzt3i.jpg",
+      "price": "720000",
+      "desc": "Chất liệu sợi Cotton 60% Visco 25% Poly 15%\nForm oversized\nDệt tràn thân áo\nLogo da đúc kim loại thương hiệu sau lưng",
+      "id": "r-_XSTj"
+    },
+    {
+      "title": "PALM HOUSE KNIT SWEATER",
+      "img": "http://res.cloudinary.com/thanhtra/image/upload/v1645202859/Web2061_sp2022/bgpq6wemcjbptjyvwvgs.jpg",
+      "price": "720000",
+      "desc": "Chất liệu sợi Cotton 60% Visco 25% Poly 15%\nForm oversized\nDệt tràn thân áo",
+      "id": "8VOiZM3"
+    },
+    {
+      "title": "GOLDIE PUFFER JACKET/black",
+      "img": "http://res.cloudinary.com/thanhtra/image/upload/v1645202955/Web2061_sp2022/o2vbvhokhgo0lv0jyusj.jpg",
+      "price": "1190000",
+      "desc": "100% Pilot Nylon 02 lớp chần bông 12oz\nForm Puffer\n02 túi cạnh sườn\n02 túi ốp\n01 túi trong\n01 chữ da PU ‘Goldie’ sau lưng\nPhụ liệu đúc tên thương hiệu",
+      "id": "hyy3Sej"
+    },
+    {
+      "title": "GOLDIE PUFFER JACKET/green",
+      "img": "http://res.cloudinary.com/thanhtra/image/upload/v1645237586/Web2061_sp2022/qxvltwxex2wrnq2zfmmh.jpg",
+      "price": "1190000",
+      "desc": "100% Pilot Nylon 02 lớp chần bông 12oz\nForm Puffer\n02 túi cạnh sườn\n02 túi ốp\n01 túi trong\n01 chữ da PU ‘Goldie’ sau lưng\nPhụ liệu đúc tên thương hiệu",
+      "id": "vMEhj8P"
+    },
+    {
+      "title": "PRINCIPLES OF PLEASURE ORANGE WASHED HOODIE",
+      "img": "http://res.cloudinary.com/thanhtra/image/upload/v1645237885/Web2061_sp2022/qx3itc7mljgumc9dkrf6.jpg",
+      "price": "680000",
+      "desc": "French Terry 100% cotton 440gsm\nGiặt nhuộm acid\nIn lụa tràn thân trước\nGhép bo giữa tay và vai\nTúi thông trước bụng\n02 khuy bấm đúc tên thương hiệu trên mũ\nPhụ liệu cao cấp",
+      "id": "X_LwvPC"
     }
   ]
 }

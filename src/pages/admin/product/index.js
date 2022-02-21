@@ -1,8 +1,7 @@
-import { getAll, remove } from "../../../api/post";
-import NavAdmin from "../../../components/NavAdmin";
+import AdminProductList from "../../../components/admin/productlist";
+import { getAll ,remove } from "../../../api/product";
 import { reRender } from "../../../ultils";
-
-const AdminNews = {
+const ProductmanagePage = {
     async render(){
         const { data } = await getAll();
         return /*html*/`
@@ -16,16 +15,16 @@ const AdminNews = {
                     <h2
                     class="text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate"
                     >
-                    Quản lý tin tức
+                    Quản lý sản phẩm
                     </h2>
                 </div>
                 <div class="mt-5 flex lg:mt-0 lg:ml-4">
-                    <a href="/news" class="sm:ml-3">
+                    <a href="/products" class="sm:ml-3">
                         <button
                             type="button"
                             class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                         >
-                        <a href="/news">Tin tức</a>
+                        <a href="/products">Sản phẩm</a>
                         </button>
                     </a>
                 </div>
@@ -35,7 +34,7 @@ const AdminNews = {
                             type="button"
                             class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                         >
-                        <a href="/admin/new/add">Thêm mới</a>
+                        <a href="/admin/products/add">Thêm mới</a>
                         </button>
                     </a>
                 </div>
@@ -60,17 +59,19 @@ const AdminNews = {
                                 <th class="bg-gray-600 p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">STT</th>
                                 <th class="bg-gray-600 p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">Tiêu đề</th>
                                 <th class="bg-gray-600 p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">Ảnh</th>
+                                <th class="bg-gray-600 p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">Giá</th>
                                 <th class="bg-gray-600 p-2 text-white font-bold md:border md:border-grey-500 text-left block md:table-cell">Actions</th>
                             </tr>
 		                </thead>
-                        <tbody  >
+                        <tbody class="text-center" >
                             ${data.map((post, index) => `
                                 <tr>
                                     <td>${index+1}</td>
                                     <td>${post.title}</td>
                                     <td><img src="${post.img}" width="80"/></td>
+                                    <td>${post.price}</td>
                                     <td>
-                                        <a href="/admin/new/${post.id}/edit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 border border-blue-500 rounded">Edit</a>
+                                        <a href="/admin/product/${post.id}/edit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 border border-blue-500 rounded">Edit</a>
                                         <button data-id="${post.id}" class="btn btn-remove bg-red-500 hover:bg-red-700 text-white font-bold py-1 px-2 border border-red-500 rounded"  >Xóa</button>
                                     </td>
                                 </tr>
@@ -92,16 +93,16 @@ const AdminNews = {
             // lấy ID từ thuộc tính data-id của button
             const id = btn.dataset.id;
             btn.addEventListener('click', () => {
-                const confirm = window.confirm("Ban co muon xoa bai viet nay khong?");
+                const confirm = window.confirm("Ban co muon xoa san pham nay khong?");
                 if(confirm){
                      // gọi hàm delete trong folder API và bắn id vào hàm
                     remove(id).then(() => {
                         console.log('Da xoa thanh cong')
                     })
                 }
-                reRender(AdminNews, "#app")
+                reRender(ProductmanagePage, "#app")
             })
         });
     }
-}
-export default AdminNews;
+};
+export default ProductmanagePage;

@@ -1,6 +1,6 @@
 import banner1 from "../components/banner";
 import News from "../components/new";
-
+import ProductsPage from "../components/product"
 const HomePage = {
    async render() {
         return /*html*/ `
@@ -8,9 +8,12 @@ const HomePage = {
         ${banner1.render()}
         </div>
 
+        <div class="text-center">
+            <p class="text-3xl">DISCOVER OUR <span class="font-bold">NEWEST ARRIVALS</span></p>
+        </div>
 
         <div class="new" >
-        ${await News.render()};
+        ${await ProductsPage.render()}
         </div>
        
               <!-- <section class="my-3">
@@ -82,8 +85,8 @@ const HomePage = {
                   </article>
               </div>
           </section> -->
-          `;
+          `
     },
     
-};
+}
 export default HomePage;
