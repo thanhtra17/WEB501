@@ -1,7 +1,7 @@
 const banner1 = {
     render() {
         return /*html*/ `
-         <img src="./img/sb_1606994772_674.jpg" alt="" class="w-full h-64 my-2 mx-auto"/>  
+         <img src="./img/sb_1606994772_674.jpg" alt="" class="w-full h-full my-2 mx-auto"/>  
         `
     },
 };

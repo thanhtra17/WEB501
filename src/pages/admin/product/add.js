@@ -1,9 +1,12 @@
 import NavAdmin from "../../../components/NavAdmin";
 import axios from "axios";
-import { add } from "../../../api/post";
+import { add } from "../../../api/product";
 import data from "../../../data";
 
-const AdminNewsAdd = {
+import $ from 'jquery';
+import validate from 'jquery-validation'; 
+
+const AdminProductsAdd = {
     render(){
         return /*html*/`
         <div class="min-h-full">
@@ -36,8 +39,9 @@ const AdminNewsAdd = {
                 <!-- Replace with your content -->
                 <div class="px-4 py-6 sm:px-0">
                     <form id="form-add">
-                        <input type="text" class="border border-black" id="title-post" placeholder="Title"/><br />
+                        <input class="" type="text" class="border border-black" id="title-post" placeholder="Title"/><br />
                         <input type="file" class="border border-black" id="img-post" placeholder="Img" /><br />
+                        <input type="" class="border border-black" id="price-post" placeholder="price"/><br />
                         <textarea name="" cols="30" rows="10" class="border border-black" id="desc-post" placeholder="Description"></textarea><br />
                         <button class="bg-slate-500">Thêm</button>
                     </form>
@@ -78,9 +82,12 @@ const AdminNewsAdd = {
             add({
                 title: document.querySelector('#title-post').value,
                 img: data.url,
-                desc: document.querySelector('#desc-post').value
+                price: document.querySelector('#price-post').value,
+                desc: document.querySelector('#desc-post').value,
+                
             });
+            document.location.href = "/admin/products/";
         });
     }
 }
-export default AdminNewsAdd;
+export default AdminProductsAdd;

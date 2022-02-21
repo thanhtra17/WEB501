@@ -1,21 +1,24 @@
+
 const Header = {
     render() {
         return /*html*/ `
-       <div class="bg-red-800 text-white ">
-           <div class="">
-            <ul class="flex">
-                <li><a href="/" class="block px-4 py-5 hover:bg-indigo-500 hover:text-white">Trang chủ</a></li>
-                <li><a href="/tuyensinh" class="block px-4 py-5 hover:bg-indigo-500 hover:text-white">Tuyển sinh</a></li>
-                <li><a href="/daotao" class="block px-4 py-5 hover:bg-indigo-500 hover:text-white">Đào tạo</a></li>
-                <li><a href="admin/news/dashboard" class="block px-4 py-5 hover:bg-indigo-500 hover:text-white">Quản lí bài viết</a></li>
-                <li><a href="/admin/new/add" class="block px-4 py-5 hover:bg-indigo-500 hover:text-white">Thêm bài viết</a></li>
-                <li><a href="/signup" class="block px-4 py-5 hover:bg-indigo-500 hover:text-white">SignUp</a></li>
-                <li><a href="/signin" class="block px-4 py-5 hover:bg-indigo-500 hover:text-white">SignIn</a></li>
-            </ul>
-            <span id="account-email" class="block px-4 py-5 text-white">username  </span>
+       <div class="w-12/12 grid gap-4 grid-cols-3 h-12 mx-auto mb-3 " >
+           <div class=""> 
+                <a href="/" class=""><img  src="./img/Untitled-3.jpg" alt="" class="w-40 my-5 ml-3" /></a>
             </div>
-            
-
+           <div class="mx-auto">
+                <ul class="flex my-7 gap-3" >
+                <li><a href="/" class="font-bold  text-xl block px-2 hover:border-b-2 border-black  ">HOME</a></li>
+                    <li><a href="/news" class="font-bold  text-xl block px-2 hover:border-b-2 border-black  ">NEWS</a></li>
+                    <li><a href="/products" class="font-bold text-xl block px-2 hover:border-b-2 border-black ">PRODUCTS</a></li>
+                </ul>
+            </div>
+            <div class="mx-auto">
+                <ul class="flex my-7 gap-3 " >
+                    <li><a href="/cart" class="font-bold text-xl block px-2 hover:border-b-2 border-black ">CART</a></li>
+                    <li><a href="/signin" class="font-bold text-xl block px-2 hover:border-b-2 border-black ">SIGN IN</a></li>
+                </ul>
+            </div>
         </div>
         `
     },
